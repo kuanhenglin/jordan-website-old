@@ -18,12 +18,12 @@ body {
   --font-serif: "Merriweather", "Georgia", serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --font-main: var(--font-mono);
-  --font-accent: var(--font-mono);
+  --font-main: var(--font-sans-serif);
+  --font-accent: var(--font-serif);
 
   font-size: calc(2.0 * var(--scale));
   font-family: var(--font-main);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-foreground);
   background: var(--color-background);
 
@@ -70,10 +70,10 @@ button {
   border-radius: calc(1.0 * var(--scale));
 
   margin: calc(0.5 * var(--scale)) 0 0 0;
-  padding: calc(0.75 * var(--scale))
-           calc(0.75 * var(--scale))
-           calc(0.75 * var(--scale))
-           calc(0.75 * var(--scale));
+  padding: calc(0.5 * var(--scale))
+           calc(1.0 * var(--scale))
+           calc(0.5 * var(--scale))
+           calc(1.0 * var(--scale));
 
   transition: background var(--time-transition);
 }
@@ -88,7 +88,7 @@ h1 img {
 
   filter: invert(calc(1 - var(--invert)));
 
-  transform: translate(0, calc(0.25 * var(--scale)));
+  transform: translate(calc(0.25 * var(--scale)), calc(0.25 * var(--scale)));
 
   transition: none;
   -webkit-transition : -webkit-filter var(--time-transition);
@@ -98,4 +98,9 @@ h1 img {
 h1 img:hover {
   transform: scale(1.25, 1.25)
              translate(0, calc(0.05 * 4 * var(--scale)));
+}
+
+.mode-switcher {
+  float: right;
+  margin: 0 0 0 0;
 }
